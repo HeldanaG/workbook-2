@@ -19,7 +19,6 @@ public class TheaterReservations {
         Scanner input =new Scanner(System.in);
 
         // asking user full name and assigning to a variable called " fullName"
-
         System.out.print("Enter your full name: ");
         fullName=input.nextLine().trim();
 
@@ -55,14 +54,14 @@ public class TheaterReservations {
 
         // determining the output based on how many tickets needed
         if (numTicket >1){
-            System.out.println(numTicket + " Tickets reserved for "+ reserveDate + " under "+ name(fullName));
+            System.out.println(numTicket + " Tickets reserved for "+ reserveDate + " under "+ displayName(fullName));
         }else {
-            System.out.println(numTicket + " Ticket reserved for "+ reserveDate + " under "+ name(fullName));
+            System.out.println(numTicket + " Ticket reserved for "+ reserveDate + " under "+ displayName(fullName));
         }
     }
-    
+
     // method to split full name and rearrange name
-    public static String  name(String fullName){
+    public static String  displayName(String fullName){
         String[] nameSeparator;
         String firstName=" ";
         String lastName=" ";
