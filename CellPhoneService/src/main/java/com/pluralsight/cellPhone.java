@@ -6,6 +6,9 @@ public class cellPhone {
     private int serialNumber;
     private String model;
     private String carrier;
+    private String phoneNumber;
+    private String owner;
+
 
     //this is decided the values for the properties
     public cellPhone() {
@@ -15,6 +18,11 @@ public class cellPhone {
         this.phoneNumber = "";
         this.owner = "";
     }
+
+    public void dial(String phoneNumber){
+        System.out.println("\n" + this.getOwner() +"'s phone is calling " + phoneNumber);
+    }
+
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -56,8 +64,6 @@ public class cellPhone {
         this.serialNumber = serialNumber;
     }
 
-    private String phoneNumber;
-    private String owner;
 
 
 
