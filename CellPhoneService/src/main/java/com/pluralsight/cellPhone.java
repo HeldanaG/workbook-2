@@ -10,6 +10,13 @@ public class cellPhone {
     private String owner;
 
 
+    public cellPhone(int serialNum, String model, String carrier, String phoneNumber, String owner){
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner =owner;
+    }
     //this is decided the values for the properties
     public cellPhone() {
         this.serialNumber = 0;
@@ -20,7 +27,10 @@ public class cellPhone {
     }
 
     public void dial(String phoneNumber){
-        System.out.println("\n" + this.getOwner() +"'s phone is calling " + phoneNumber);
+        System.out.println( this.getOwner() +"'s phone is calling " + phoneNumber);
+    }
+    public void dial(cellPhone phoneNumber){
+        System.out.println( this.getOwner() +"'s phone is calling " + phoneNumber.getPhoneNumber());
     }
 
 
